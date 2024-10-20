@@ -18,7 +18,7 @@ export function renderHome() {
     orderButton.textContent = "Order online";
 
     // Append all elements to content div
-    content.appendChild(container);
-    container.appendChild(logo);
-    container.appendChild(orderButton);
+    content.append(container);
+    container.append(logo);
+    container.append(orderButton);
 }

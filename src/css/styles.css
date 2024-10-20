@@ -13,7 +13,6 @@
 
 body {
     margin: 0;
-    overflow: hidden;
 }
 
 button {
@@ -70,17 +69,48 @@ header i {
 
 #logo {
     font-weight: 600;
-    font-size: 4rem;
+    font-size: 4.5rem;
     color: white;
 }
 
 #order {
     margin-top: 1rem;
-    font-size: 1.8rem;
-    font-weight: 800;
-    padding: 0.8rem 1.7rem;
+    font-size: 1.6rem;
+    font-weight: 900;
+    padding: 0.9rem 1.5rem;
     border-radius: 2rem;
     border: none;
     color: rgb(0, 0, 0);
     background-color: rgb(68, 208, 91);
+}
+
+.itemDiv {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+}
+
+.menuContainer {
+    margin-top: 2rem;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.menu {
+    display: flex;
+    gap: 7rem;
+}
+
+.itemDiv {
+    display: flex;
+    gap: 3rem;
+    padding-bottom: 0.5rem;
 }

@@ -1,21 +1,31 @@
 import "../css/styles.css";
 import "../css/fontello.css";
 import { renderHome } from "./home.js";
-import { renderContact } from "./contact.js";
+import { renderAbout } from "./about.js";
 import { renderMenu } from "./menu.js";
 
 document.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector("header");
+    const nav = document.getElementById("nav");
+    const content = document.querySelector(".content");
+
+    // Add github link
+    const anchor = document.createElement("a");
+    anchor.href = "https://github.com/luciavu/restaurant-page";
+    anchor.target = "_blank";
+    const githubIcon = document.createElement("i");
+    githubIcon.classList.add("icon-github-circled");
+    anchor.append(githubIcon);
+    header.insertBefore(anchor, nav);
+
     // Create navigation menu and attach event listeners
-    const navOptions = ["home", "menu", "contact"];
+    const navOptions = ["home", "menu", "about"];
 
     const renderFunctions = {
         home: renderHome,
-        contact: renderContact,
+        about: renderAbout,
         menu: renderMenu,
     };
-
-    const nav = document.getElementById("nav");
-    const content = document.querySelector(".content");
 
     navOptions.forEach((option) => {
         // Create button
@@ -32,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
             content.innerHTML = "";
             renderFunctions[option]();
         });
-        nav.appendChild(button);
+        nav.append(button);
     });
 
     // Render home on page load
