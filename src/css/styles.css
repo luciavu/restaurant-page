@@ -13,7 +13,10 @@
 
 @media only screen and (max-width: 605px) {
     html {
-        font-size: 8px;
+        font-size: 10px;
+    }
+    .content .aboutText {
+        width: 70%;
     }
 }
 
@@ -80,9 +83,10 @@ header i {
     font-weight: 700;
     padding: 0.6rem 1rem;
     border: none;
+    color: black;
 }
 
-.active {
+#nav button .active {
     background-color: black;
     color: white;
 }
