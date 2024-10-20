@@ -6,17 +6,19 @@ export function renderMenu() {
         "Bacon Burger": 4.0,
         "Veggie Burger": 3.75,
         "Double Burger": 5.0,
+        "Swiss Burger": 5.0,
         "Mushroom Burger": 4.5,
         "BBQ Burger": 4.25,
     };
 
     const snacks = {
-        "French Fries": 2.5,
+        "Ice Cream": 3.5,
+        "Lemon Bars": 2.0,
+        "Yogurt Parfait": 4.0,
+        "Brownie Bites": 2.5,
         "Onion Rings": 3.0,
-        "Mozzarella Sticks": 4.0,
-        "Chicken Wings": 5.5,
-        Nachos: 3.75,
-        "Soft Pretzel": 2.25,
+        "Garlic Bread": 3.75,
+        "Oreo Milkshake": 5.0,
     };
 
     const drinks = {
@@ -25,6 +27,7 @@ export function renderMenu() {
         Sprite: 2.0,
         Fanta: 2.0,
         "Grimace Shake": 3.0,
+        Coffee: 2.0,
         Water: 1.0,
     };
 
@@ -39,10 +42,13 @@ export function renderMenu() {
         for (const [name, price] of Object.entries(items)) {
             const itemDiv = document.createElement("div");
             itemDiv.classList.add("itemDiv");
+
             const nameDiv = document.createElement("div");
             const priceDiv = document.createElement("div");
+
             nameDiv.textContent = `${name}`;
             priceDiv.textContent = `${price.toFixed(2)}`;
+
             itemDiv.append(nameDiv);
             itemDiv.append(priceDiv);
             sectionContainer.append(itemDiv);
