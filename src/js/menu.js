@@ -14,11 +14,11 @@ export function renderMenu() {
     const snacks = {
         "Ice Cream": 3.5,
         "Lemon Bars": 2.0,
-        "Yogurt Parfait": 4.0,
+        "Yoghurt Parfait": 4.0,
         "Brownie Bites": 2.5,
         "Onion Rings": 3.0,
         "Garlic Bread": 3.75,
-        "Oreo Milkshake": 5.0,
+        "Oreo Icecream": 5.0,
     };
 
     const drinks = {
